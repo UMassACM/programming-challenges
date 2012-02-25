@@ -1,0 +1,2 @@
+Download the test data at
+https://contest.codequest.spotify.com/download/scq12-data.tar.gz
