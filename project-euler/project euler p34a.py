@@ -4,6 +4,8 @@
 # the sum of the factorial of their digits.
 # Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 
+# simple solution: derive upper bound and check all candidate n < bound
+
 import math
 from math import factorial, log
 
