@@ -10,7 +10,15 @@ The programming challenges fall into these categories:
 - Project Euler problems, which tend toward the mathematical.
 - Miscellaneous challenges and contests
 
-Disclaimer: please note that programming competition coding has almost no
+Contributing:
+
+Please only commit your *source* files, that is the .java,
+.c, .cpp, .py, etc. files that contain your code. Do not include binaries,
+platform-specific, or other secondary files.
+
+Disclaimer:
+
+Please note that programming competition coding has almost no
 relation to software development or scientific programming, and the solutions
 presented here are not indicative of anyone's true programming style and
 development practices.

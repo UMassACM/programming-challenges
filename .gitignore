@@ -1,1 +1,7 @@
+*~
 *.class
+*.o
+*.ncb
+*.sln
+*.suo
+*.vcproj
