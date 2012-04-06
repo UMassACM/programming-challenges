@@ -29,14 +29,23 @@ public class memory_mg {
 
     static Map<BigInteger,Long> tab = new HashMap<BigInteger, Long>();
     static final long M = 1000000009;
+
+    /**
+     * Returns the number of ways to represent x in three-state memory,
+     * where x is in binary.
+     */
     static long solve(BigInteger x) {
 	if (x.equals(ONE)) return 1;
 	if (x.equals(ZERO)) return 1;
 	if (! tab.containsKey(x)) {
-	    int n = x.getLowestSetBit();
-	    if (n==0) 
+	    int n = x.getLowestSetBit(); // gets the index of the lowest bit set to 1
+	    if (n==0)
+        // When the lowest bit is a 1, we can't change it to 2 or 0 and make up for
+        // the change in the higher bits.
 		tab.put(x, solve(x.divide(TWO)));
 	    else
+		// When x = 2y, the lowest bit is a 0. We can change it to 2 and make up for the 
+        // difference by subtracting 1 from y.
 		tab.put(x, (solve(x.divide(TWO)) + solve(x.divide(TWO).subtract(ONE))) % M );
 	}
 	return tab.get(x).longValue();
